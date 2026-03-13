@@ -1,5 +1,5 @@
 context:
-  version: "0.4.0"
+  version: "0.4.6"
   python_min: "3.11"
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/a/api-dock/api_dock-${{ version }}.tar.gz
-  sha256: 2360038bb2549769fba47f9ac09e5a95f920cd77f49ed9139e15313fc60ba203
+  sha256: 14e27ea60414811ddbfa86d9e82decf0a9ddbb10276bd4563a1c8ddf1feeefb6
 
 build:
   number: 0
@@ -20,16 +20,18 @@ requirements:
     - python ${{ python_min }}.*
     - pip
     - python-build
+    - setuptools
   run:
     - python >=${{ python_min }}
-    - click
-    - fastapi
-    - uvicorn
-    - pyyaml
-    - httpx
-    - pyarrow
-    - duckdb
-    - flask
+    - "click"
+    - "fastapi >=0.117.1,<0.118"
+    - "uvicorn >=0.37.0,<0.38"
+    - "pyyaml >=6.0.3,<7"
+    - "httpx >=0.28.1,<0.29"
+    - "duckdb >=1.1.3,<2"
+    - "flask"
+    - "cryptography >=46.0.5,<47"
+    - "boto3 >=1.42.59,<2"
 
 tests:
   - python:
