@@ -1,5 +1,5 @@
 context:
-  version: "0.4.6"
+  version: "0.4.7"
   python_min: "3.11"
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/a/api-dock/api_dock-${{ version }}.tar.gz
-  sha256: 14e27ea60414811ddbfa86d9e82decf0a9ddbb10276bd4563a1c8ddf1feeefb6
+  sha256: 4ffb98f63eaf9951c6295f8596fdc4e2a6f4b612c6e41c366454aea8437849b1
 
 build:
   number: 0
