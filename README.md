@@ -31,10 +31,11 @@ Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table><tr>
+    <td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=26952&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/api_dock-feedstock?branchName=main">
+      <a href="https://github.com/conda-forge/api_dock-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/api_dock-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
       </a>
     </td>
   </tr>
@@ -57,31 +58,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `api_dock` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install api_dock
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install api_dock
 ```
 
-It is possible to list all of the versions of `api_dock` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add api_dock
+# for installing globally
+pixi global install api_dock
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `api_dock` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search api_dock --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search api_dock --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search api_dock --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -93,6 +136,8 @@ mamba repoquery whoneeds api_dock --channel conda-forge
 # List dependencies of `api_dock`:
 mamba repoquery depends api_dock --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
